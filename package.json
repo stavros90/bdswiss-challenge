@@ -1,0 +1,41 @@
+{
+  "name": "bdswiss",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "main": "app.js",
+  "browserslist": [
+    "last 2 versions",
+    "> 1%",
+    "IE >= 11"
+  ],
+  "scripts": {
+    "start": "cross-env NODE_ENV=development webpack-dev-server",
+    "build": "cross-env NODE_ENV=production webpack -p --progress --hide-modules"
+  },
+  "author": "Splendid Agency",
+  "license": "Proprietary",
+  "dependencies": {
+    "bootstrap": "^4.5.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.5",
+    "aos": "^2.3.4",
+    "babel-loader": "^8.1.0",
+    "chokidar": "^3.4.2",
+    "copy-webpack-plugin": "^6.1.0",
+    "cross-env": "^7.0.2",
+    "css-loader": "^4.3.0",
+    "file-loader": "^6.1.0",
+    "mini-css-extract-plugin": "^0.11.0",
+    "node-sass": "^4.14.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.4",
+    "remove-files-webpack-plugin": "^1.4.4",
+    "sass-loader": "^10.0.1",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.1.3"
+  }
+}
