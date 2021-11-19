@@ -2,33 +2,66 @@
     height:500px;
     width:100%; 
     position: relative;
+    overflow: hidden;
     background:rgb(12, 12, 94);
- //   background:url('');
     background-size: cover;
     background-position:center center;
     background-repeat: no-repeat;
-  //  background-blend-mode: darken;
+    background-blend-mode: darken;
 
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    iframe {
+        position:absolute;
+        z-index:1;
+        left:50%;
+        top:50%;
+        transform:translate(-50%,-50%);
+        width:100vw;
+        height:100%;
 
-    h1 {
-        margin-bottom:20px;
-        font-size:52px;
-        font-weight: 500;
-        text-align: center;
-        color:white;
+        @media (min-aspect-ratio: 16/9) {
+            height: 56.25vw;
+        }
+              
+        @media (max-aspect-ratio: 16/9) {
+            width: 177.78vh;
+        }
     }
 
-    p {
-        text-align: center;
-        color:white;
-        font-size:16px;
-        margin-bottom:20px;
-    }
+    .header-info {
+        position:absolute;
+        z-index:2;
+        width:100%;
+        height:100%;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
+
+        h1 {
+            margin-bottom:20px;
+            font-size:52px;
+            font-weight: 500;
+            text-align: center;
+            color:white;
+        }
+    
+        p {
+            text-align: center;
+            color:white;
+            font-size:16px;
+            margin-bottom:20px;
+        }
+    }
+}
+
+/* Welcome */
+#welcome {
+    padding:100px 0;
 }
 
 /* RSS Section */
@@ -58,10 +91,10 @@
             padding:0;
     
             li {
-                margin-bottom:20px;
+                margin-bottom:5px;
                 display:flex;
                 flex-direction: row;
-                margin-left:5px;
+                margin-left:25px;
                 
                 .rss-list--icon svg {
                     width:20px;
@@ -71,11 +104,17 @@
     
                 span.rss-list--title {
                     display:block;
-    
-                    &:hover {
-                        color:#007aff;
-                        cursor: pointer;
+
+                    a {
+                        color:black;
+                                
+                        &:hover {
+                            color:#007aff;
+                            cursor: pointer;
+                        }
+
                     }
+
                 }
     
                 span.rss-list--meta {
