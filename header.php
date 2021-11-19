@@ -9,6 +9,8 @@
 
 <body <?php body_class();?>> 
 
-    <header>
-        header
+    <header class="container-fluid">
+        <div class="container">
+            <a href="<?php echo esc_url(home_url()); ?>"><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logo.png'); ?>" alt="BDSwiss" class="logo"></a>
+        </div>
     </header>

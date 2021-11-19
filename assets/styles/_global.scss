@@ -3,3 +3,84 @@
     padding:0;
     box-sizing: border-box;
 }
+
+html, body {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+a.blue-button {
+    text-decoration: none;
+    background:#007aff;
+    color:white;
+    font-size:14px;
+    text-transform: uppercase;
+    padding:10px 15px;
+    border-radius: 6px;
+}
+
+.risk-button {
+    margin-bottom:10px;
+    position: relative;
+
+    &::after {
+        content:"Your Capital is at risk";
+        font-size:12px;
+        text-align:center;
+        display:block;
+        margin-top:10px;
+    }
+}
+
+
+header {
+    background:transparent;
+    padding:15px 0;
+}
+
+footer {
+    padding:60px 0;
+    background:#f9f9f9;
+
+    p {
+        font-size:14px;
+        font-weight: 300;
+    }
+
+    a {
+        text-decoration: none;
+        color:#ec1c24;
+        position:relative;
+        overflow: hidden;
+
+        &::after {
+            content:"";
+            display:inline-block;
+            position:absolute;
+            bottom:-3px;
+            left:0;
+            height:1px;
+            width:0;
+            background-color:#007aff;
+            transition: all 0.2s ease-in-out;
+            overflow: hidden;
+
+        }
+
+        &:hover {
+            color:#ec1c24;
+
+            &::after {
+                width:100%;
+                left:0;
+            }
+        }
+        
+    }
+
+    b {
+        font-weight: 500;
+    }
+
+
+}
