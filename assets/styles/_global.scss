@@ -17,6 +17,12 @@ a.blue-button {
     text-transform: uppercase;
     padding:10px 15px;
     border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        color:white;
+        background:#0566ce;
+    }
 }
 
 .risk-button {
